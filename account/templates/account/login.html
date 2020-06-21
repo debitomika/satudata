@@ -1,7 +1,7 @@
 {% extends "account/base.html" %}
 {% load crispy_forms_tags %}
 {% block content %}
-<!-- ======= User Register Section, I am using the contact template ======= -->
+<!-- ======= User Login Section, I am using the contact template ======= -->
 <section id="contact" class="contact">
     <div class="container" data-aos="fade-up">
         <div class="row mt-5">
@@ -11,14 +11,14 @@
                     <div class="form-group">
                         {{ form|crispy }}
                     </div>
-                    <div class="text-center"><button type="submit">Sign Up</button></div>
+                    <div class="text-center"><button type="submit">Login</button></div>
                 </form>
             </div>
         </div>
         <div class="row mt-5">
             <div class="col mt-lg-0">
-                <div class="text-center">Need An Account? Already Have An Account? <a class="ml-2"
-                        href="{% url 'login' %}">Sign In</a></div>
+                <div class="text-center">Need An Account? <a class="ml-2" href="{% url 'account-register' %}">Sign Up
+                        Now</a></div>
             </div>
         </div>
 

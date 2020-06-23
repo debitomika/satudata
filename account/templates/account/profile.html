@@ -3,7 +3,7 @@
 {% load crispy_forms_tags %}
 {% block content %}
 <!-- ======= Profile Section, Modified from Team Section Template======= -->
-<section id="team" class="team section-bg">
+<section id="team" class="team section-bg mt-4">
     <div class="container" data-aos="fade-up">
 
         <div class="row">
@@ -11,7 +11,7 @@
             <div class="col-lg-12 d-flex align-items-stretch justify-content-center" data-aos="fade-up" data-aos-delay="100">
                 <div class="member">
                     <div class="member-img">
-                        <img src="{% static 'account/img/team/team-3.jpg' %}" class="img-fluid" alt="">
+                        <img src="{{ user.image.url }}" class="img-fluid" alt="">
                         <div class="social">
                             <a href=""><i class="icofont-twitter"></i></a>
                             <a href=""><i class="icofont-facebook"></i></a>

@@ -61,7 +61,7 @@
                 </ul>
             </nav>
             {% if user.is_authenticated %}
-            <a href="{% url 'account-profile' %}" class="get-started-btn">Profile</a><!-- need to scrollto jquery-->
+            <a href="{% url 'account-profile' %}" class="get-started-btn">{{ user.username|title }} Profile</a><!-- need to scrollto jquery-->
             <a href="{% url 'logout' %}" class="get-started-btn">Logout</a><!-- need to scrollto jquery-->
             {% else %}
             <a href="{% url 'login' %}" class="get-started-btn">Login</a><!-- need to scrollto jquery-->

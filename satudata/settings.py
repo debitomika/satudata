@@ -37,6 +37,7 @@ INSTALLED_APPS = [
 
     # Django extra apps
     'crispy_forms',
+    'django_extensions',
 
     # Django built-in apps
     'django.contrib.admin',
@@ -109,13 +110,19 @@ AUTH_PASSWORD_VALIDATORS = [
     },
 ]
 
+# Graph models
+GRAPH_MODELS = {
+  'all_applications': True,
+  'group_models': True,
+}
+
 
 # Internationalization
 # https://docs.djangoproject.com/en/3.0/topics/i18n/
 
 LANGUAGE_CODE = 'en-us'
 
-TIME_ZONE = 'UTC'
+TIME_ZONE = 'Asia/Jakarta'
 
 USE_I18N = True
 
@@ -128,6 +135,9 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/3.0/howto/static-files/
 
 STATIC_URL = '/static/'
+
+MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
+MEDIA_URL = '/media/'
 
 CRISPY_TEMPLATE_PACK = 'bootstrap4'
 
